@@ -35,3 +35,5 @@ Similar to SSD, ZRNet is proposal-free based, which can be trained and tested in
 * inspect
 * collections
 * tarfile
+
+Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php). Unzip the training images, testing images and the labels in $ZRNet_ROOT/KITTI/training and  $ZRNet_ROOT/KITTI/testing.
