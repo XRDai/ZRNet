@@ -183,7 +183,7 @@ def make_args():
     parser.add_argument('--model', default='ZRNet_vgg', help='model')
     parser.add_argument('--logdir', default='./logs/')
     parser.add_argument('--kittiClass', default='./my_Class.txt')
-    parser.add_argument('--test_dir', default='../KITTI/testing/image_2')
+    parser.add_argument('--test_dir', default='./KITTI/testing/image_2')
     parser.add_argument('--save_dir', default='./OUT')
 
     return parser.parse_args()
