@@ -55,3 +55,6 @@ Then you will get the results of KITTI dataset. If you submit the results to the
 
 ### Traing 
 5. The training code will be appear soon.
+
+### Acknowledge
+We have benifited a lot from [RON_Tensorflow](https://github.com/HiKapok/RON_Tensorflow).
