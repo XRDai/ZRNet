@@ -41,3 +41,12 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
  ### Models
 3. We have provided the models that are trained from KITTI traing set. 
   [KITTI models (VGG-16)](https://drive.google.com/open?id=1n-UwjrO7J_3ZaS7UBPsbxjtMIqQYYByk)
+  
+  You can download our pre-trained models and unrar it in $ZRNet_ROOT
+
+### Testing
+4. python test.py 
+
+Then you will get the results of KITTI dataset. If you submit the results to the KITTI offical website, you will get the following results:
+|  | Moderate | Easy | Hard |
+| ZRNet (VGG1-6) | 88.82 | 89.77 | 79.07 | |
