@@ -49,5 +49,9 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
 
 Then you will get the results of KITTI dataset. If you submit the results to the KITTI offical website, you will get the following results:
 
-| --- -----------| Moderate |  Easy |  Hard |
+| ---------------| Moderate |  Easy |  Hard |
+
 | ZRNet (VGG1-6) |  88.82   | 89.77 | 79.07 | 
+
+### Traing 
+5. The training code will be appear soon.
