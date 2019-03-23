@@ -1,7 +1,7 @@
 # ZRNet
 ## The Z-style Residual Network 
 
-<img src="ZRNetSep.png" width="777px" height="677px">
+<img src="ZRNetSep.png" width="777px" height="580px">
 
 ### Introduction
 Similar to SSD, ZRNet is proposal-free based, which can be trained and tested in an end-to-end manner. As shown in the above Figure, ZRNet is formed by two parts, Z-style structure (ZS) and the residual network (RNet). The Z-style structure aims to combine features on multi-scales and multi-paths so as to provide sophisticated features for residual network, whereas the residual network aims to produce accurate bounding boxes and multi-class softmax probability. The Z-style structure is constructed by the backbone network (BBN), top-down connection block (TDCB), top-down module (TDM), down-top connection block (DTCB) and down-top module (DTM), where the top-down connection block and down-top connection block are devoted to convert features from backbone network to top-down module then to down-top module. The residual network is consist of backbone detection network (BDN), top-down detection network (TDDN) and down-top detection network (DTDN). The backbone detection network predicts scores and shape offsets. The top-down detection network produces scores and the residual between the predicted boxes of backbone detection network and the ground truth boxes. Scores and the residual are also predicted by the down-top detection network, where the difference is that the residual is between the predicted boxes of top-down detection network and the ground truth boxes.
@@ -48,6 +48,8 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
 4. python test.py 
 
 Then you will get the results of KITTI dataset. If you submit the results to the KITTI offical website, you will get the following results:
+
+<img src="car_detection.png" width="300px" >
 
 | ---------------| Moderate |  Easy |  Hard |
 
