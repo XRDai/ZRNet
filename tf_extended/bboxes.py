@@ -478,38 +478,12 @@ def bboxes_filter_overlap(labels, bboxes,
     with tf.name_scope(scope, 'bboxes_filter', [labels, bboxes]):
         scores = bboxes_intersection(tf.constant([0, 0, 1, 1], bboxes.dtype),
                                      bboxes)
-
-        ## 即 0.01 - 0.4 为 dontcare
-        ##  > 0.4 为 原始 label
-        ##  < 0.01 为 negative
-
-        ##第一步： 对于相交部分 小于一定阈值的 设置为 dontcare 其 label 设置为 0
-        ##        对于相交部分 大于一定阈值的 保留其原始 label
         mask = scores > threshold
         labels = tf.where(mask, labels, tf.zeros_like(labels, dtype=labels.dtype))
 
-        ##第二步： 完全不相交的 小于一定阈值的 设置为 dontcare 其 label 设置为 -1
-        # mask = tf.cast(tf.zeros_like(labels, dtype=tf.uint8), tf.bool)
         mask = tf.less(scores, 0.01)
         labels = tf.where(mask, -1 * tf.ones_like(labels, dtype=labels.dtype), labels)
-        # labels = tf.boolean_mask(labels, mask)
-        # bboxes = tf.boolean_mask(bboxes, mask)
 
-        ## 去除之后 score
-        # scores = tf.boolean_mask(scores, mask)
-
-        # # always keep al least one
-        # max_intersection = tf.reduce_max(scores)
-        # max_intersection_mask = tf.equal(scores, max_intersection)
-        #
-        # mask = tf.logical_or(scores > threshold, max_intersection_mask)
-
-        # if assign_negative:
-        #     labels = tf.where(mask, labels, -labels)
-        #     # bboxes = tf.where(mask, bboxes, bboxes)
-        # else:
-        #     labels = tf.boolean_mask(labels, mask)
-        #     bboxes = tf.boolean_mask(bboxes, mask)
         return labels, bboxes
 
 
