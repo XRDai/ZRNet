@@ -48,5 +48,7 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
 4. python test.py 
 
 Then you will get the results of KITTI dataset. If you submit the results to the KITTI offical website, you will get the following results:
+
 |  | Moderate | Easy | Hard |
-| ZRNet (VGG1-6) | 88.82 | 89.77 | 79.07 | |
+
+| ZRNet (VGG1-6) | 88.82 | 89.77 | 79.07 | 
