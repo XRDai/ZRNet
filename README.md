@@ -21,7 +21,7 @@ Similar to SSD, ZRNet is proposal-free based, which can be trained and tested in
   
  ### Requirements
 
-2. The code requires [Python 2.7](https://www.python.org/download/releases/2.7/), [Tensorflow 1.0](https://www.tensorflow.org/install/), as well as the following python libraries: 
+2. The code requires [Python 2.7](https://www.python.org/download/releases/2.7/), [Tensorflow 1.3.0](https://www.tensorflow.org/install/), as well as the following python libraries: 
 
 * tensorflow
 * numpy
