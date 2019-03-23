@@ -45,7 +45,10 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
   You can download our pre-trained models and unrar it in $ZRNet_ROOT
 
 ### Testing
-4. python test.py 
+4. 
+```Shell
+  python test.py 
+```
 
 Then you will get the detection results of KITTI dataset in './OUT'. If you submit the results to the KITTI offical website, you will get the following results:
 
@@ -54,6 +57,11 @@ Then you will get the detection results of KITTI dataset in './OUT'. If you subm
 | ---------------| Moderate |  Easy |  Hard |
 
 | ZRNet (VGG1-6) |  88.82   | 89.77 | 79.07 | 
+
+It requires about 0.048ms for each image. The inference time will be acquired
+```Shell
+python test_time.py
+```
 
 ### Traing 
 5. The training code will be appear soon.
