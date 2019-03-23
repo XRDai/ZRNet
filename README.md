@@ -49,7 +49,7 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
 
 Then you will get the results of KITTI dataset. If you submit the results to the KITTI offical website, you will get the following results:
 
-<img src="car_detection.png" width="400px" >
+<img src="car_detection.png" width="350px" >
 
 | ---------------| Moderate |  Easy |  Hard |
 
