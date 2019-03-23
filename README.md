@@ -49,7 +49,6 @@ Download the KITTI dataset(http://www.cvlibs.net/datasets/kitti/eval_object.php)
 ```Shell
   python test.py 
 ```
-
 Then you will get the detection results of KITTI dataset in './OUT'. If you submit the results to the KITTI offical website, you will get the following results:
 
 <img src="car_detection.png" width="350px" >
