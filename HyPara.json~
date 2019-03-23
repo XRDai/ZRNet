@@ -1,0 +1,1 @@
+{"data": {"train_file": "./KITTI/train.txt", "val_file": "./KITTI/val.txt", "test_file": "./KITTI/test.txt", "label_dir": "../KITTI/training/label_2"}, "image_width": 1248,  "image_height": 384,"DataPath":"./tfrecords", "kittiClassPath":"./my_Class.txt"}
