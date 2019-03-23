@@ -33,8 +33,6 @@ def flaten_predict(predictions, localisations):
         #flaten_scores.append(tf.reshape(tf.reduce_max(cls_pred, -1), [batch_size, -1]))
         # flaten_labels.append(tf.reshape(tf.argmax(cls_pred, -1), [batch_size, -1]))
 
-        ## 除了负样本的 最大概率
-        ## 0 是 background， 已经去掉， 故 +1 表示真实的
         flaten_labels.append(tf.reshape(tf.argmax(cls_pred[:, :, 1:], -1) + 1, [batch_size, -1]))
 
         flaten_locations.append(tf.reshape(localisations[i], [batch_size, -1, 4]))
